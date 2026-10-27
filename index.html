@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>防災知識王</title>
 <style>
-:root{--bg:#0c1726;--bg2:#13233a;--card:#1a2f4d;--line:#2b4568;--ink:#f3f6fb;--mute:#9fb2cc;--acc:#ff8a3d;--ok:#2fb67c;--bad:#ef5b5b;--c0:#e5484d;--c1:#3b82f6;--c2:#e89c12;--c3:#2fb67c;--t0:#2fb67c;--t1:#e5484d}
+:root{--p0:#ffb020;--p1:#38bdf8;--p2:#a3e635;--p3:#f472b6;--bg:#0b1d22;--bg2:#12303a;--card:#173b47;--line:#2a5663;--ink:#f3f6fb;--mute:#9fb2cc;--acc:#ff8a3d;--ok:#2fb67c;--bad:#ef5b5b;--c0:#e5484d;--c1:#3b82f6;--c2:#e89c12;--c3:#2fb67c;--t0:#2fb67c;--t1:#e5484d}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
-body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:radial-gradient(1200px 700px at 20% -10%,#1b3557 0,transparent 60%),var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/32px 32px,linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/32px 32px,radial-gradient(1200px 700px at 20% -10%,#14414a 0,transparent 60%),var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
 button,input,select{font:inherit;color:inherit}
 button{cursor:pointer}
 .btn{background:var(--card);border:1px solid var(--line);padding:.6em 1.1em;border-radius:10px;font-weight:600;transition:.15s}
@@ -24,7 +24,7 @@ button{cursor:pointer}
 .hcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
 .hc{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:12px;text-align:left}
 .hc h2{font-size:20px}.hc p{color:var(--mute);font-size:14px;flex:1}
-.hc input{background:#0c1726;border:1px solid var(--line);border-radius:10px;padding:.7em 1em;font-size:20px;letter-spacing:.3em;text-align:center}
+.hc input{background:#0a181c;border:1px solid var(--line);border-radius:10px;padding:.7em 1em;font-size:20px;letter-spacing:.3em;text-align:center}
 /* ===== 主持人 ===== */
 .host{max-width:1100px;margin:0 auto;padding:18px 18px 60px}
 .hh{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
@@ -40,17 +40,17 @@ button{cursor:pointer}
 @media(max-width:760px){.grid2{grid-template-columns:1fr}}
 .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
 .row label{min-width:7em;color:var(--mute);font-size:14px}
-select{background:#0c1726;border:1px solid var(--line);border-radius:8px;padding:.45em .7em}
+select{background:#0a181c;border:1px solid var(--line);border-radius:8px;padding:.45em .7em}
 .cats{display:flex;flex-wrap:wrap;gap:8px}
-.cats label{background:#0c1726;border:1px solid var(--line);border-radius:999px;padding:.35em .9em;font-size:14px;cursor:pointer;display:flex;gap:6px;align-items:center}
+.cats label{background:#0a181c;border:1px solid var(--line);border-radius:999px;padding:.35em .9em;font-size:14px;cursor:pointer;display:flex;gap:6px;align-items:center}
 .slots{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.slot{background:#0c1726;border:1px dashed var(--line);border-radius:12px;padding:12px;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.slot{background:#0a181c;border:1px dashed var(--line);border-radius:12px;padding:12px;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:8px}
 .slot.on{border-style:solid;border-color:var(--ok)}
 .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--bad);margin-right:6px}
 .dot.on{background:var(--ok)}
 .qcard .qtxt{font-size:20px;font-weight:700;line-height:1.5;margin:6px 0 12px}
 .hopts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.hopt{display:flex;gap:8px;padding:10px 12px;border-radius:10px;background:#0c1726;border:1px solid var(--line);font-size:15px}
+.hopt{display:flex;gap:8px;padding:10px 12px;border-radius:10px;background:#0a181c;border:1px solid var(--line);font-size:15px}
 .hopt.right{border-color:var(--ok);background:rgba(47,182,124,.15)}
 .hexp{margin-top:12px;padding:12px;border-left:4px solid var(--acc);background:rgba(255,138,61,.1);border-radius:8px;font-size:15px;line-height:1.6}
 .ctrls{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
@@ -74,45 +74,48 @@ th{color:var(--mute);font-weight:500;font-size:13px}
 .top .cat{background:var(--acc);color:#1b1006;font-weight:800;padding:.2em .9em;border-radius:999px}
 .top .no{color:var(--mute)}
 .timer{margin-left:auto;display:flex;align-items:center;gap:1vw;flex:1;max-width:40vw}
-.bar{flex:1;height:1.2vh;background:#0c1726;border-radius:99px;overflow:hidden}
+.bar{flex:1;height:1.2vh;background:#0a181c;border-radius:99px;overflow:hidden}
 .bar i{display:block;height:100%;background:var(--acc);width:100%;transition:width .2s linear}
 .timer b{font-size:clamp(22px,3.2vw,56px);min-width:2.2em;text-align:right}
 .question{font-size:clamp(22px,3.6vw,66px);font-weight:800;line-height:1.35;background:var(--bg2);border:1px solid var(--line);padding:2vh 2.5vw;border-radius:1.2vw}
 .scr.rev .question{font-size:clamp(20px,2.8vw,50px)}
 .opts{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:1.2vw;min-height:0}
-.opt{display:flex;align-items:center;gap:1.2vw;padding:1vh 1.6vw;border-radius:1vw;font-size:clamp(16px,2.5vw,46px);font-weight:700;color:#fff;transition:.3s}
-.opt.c0{background:var(--c0)}.opt.c1{background:var(--c1)}.opt.c2{background:var(--c2)}.opt.c3{background:var(--c3)}.opt.t0{background:var(--t0)}.opt.t1{background:var(--t1)}
-.opt .sym{font-size:1.2em;min-width:1.2em;text-align:center}
-.opt.dim{opacity:.22;filter:grayscale(.6)}
-.opt.right{box-shadow:0 0 0 .45vw #fff,0 0 3vw rgba(255,255,255,.5)}
+.opt{display:flex;align-items:center;gap:1.4vw;padding:1vh 1.4vw;border-radius:1vw;font-size:clamp(16px,2.5vw,46px);font-weight:700;color:#1d2433;background:#f3ecdc;border-left:1vw solid var(--oc,#888);transition:.3s}
+.opt.o0{--oc:#0f766e}.opt.o1{--oc:#b45309}.opt.o2{--oc:#9d174d}.opt.o3{--oc:#4338ca}.opt.t0{--oc:#15803d}.opt.t1{--oc:#b91c1c}
+.opt .sym{display:inline-flex;align-items:center;justify-content:center;width:1.7em;height:1.7em;border-radius:50%;background:var(--oc);color:#fff;flex:none}
+.opt.dim{opacity:.25;filter:grayscale(.7)}
+.opt.right{background:#e3f5e9;box-shadow:0 0 0 .4vw var(--ok),0 0 3vw rgba(47,182,124,.5)}
 .exp{background:rgba(47,182,124,.13);border:2px solid var(--ok);border-radius:1vw;padding:1.4vh 2vw;font-size:clamp(14px,2vw,36px);line-height:1.5}
 .exp b{color:var(--ok)}
 .pc{flex:1;background:var(--bg2);border:1px solid var(--line);border-radius:1vw;padding:1vh 1.2vw;display:flex;flex-direction:column;gap:.3vh;font-size:clamp(14px,1.8vw,30px);min-width:0}
+.pc{border-top:.7vh solid var(--pc,var(--line))}
 .pc.off{opacity:.45}
-.pc .pn{color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pc .ps{font-size:1.9em;font-weight:900;line-height:1.1}
+.pc .pn{color:var(--pc,var(--mute));font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pc .ps{font-size:1.9em;font-weight:900;line-height:1.1;color:var(--pc,var(--ink))}
 .pc.empty{border-style:dashed;color:var(--mute);justify-content:center;align-items:center;min-height:9vh}
 .pause{position:absolute;inset:0;background:rgba(8,14,24,.82);display:flex;align-items:center;justify-content:center;font-size:clamp(40px,8vw,140px);font-weight:900;z-index:5}
 .lost{position:fixed;right:12px;top:10px;background:#5a2330;color:#ffd0d6;padding:4px 12px;border-radius:999px;font-size:13px;z-index:9}
 .rank{width:100%;max-width:1100px;display:flex;flex-direction:column;gap:1.2vh}
 .rk{display:flex;align-items:center;gap:2vw;background:var(--bg2);border:1px solid var(--line);border-radius:1.2vw;padding:1.4vh 2vw;font-size:clamp(20px,3.4vw,60px);font-weight:800}
 .rk .m{font-size:1.3em;min-width:1.4em}.rk .n{flex:1;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rk .n,.rk .sc{color:var(--pc,var(--ink))}
 .rk.first{border-color:var(--acc);background:rgba(255,138,61,.15)}
 /* ===== 選手（手機）===== */
 .pl{min-height:100dvh;display:flex;flex-direction:column;padding:14px;gap:12px;max-width:640px;margin:0 auto}
 .pl.center{justify-content:center;align-items:center;text-align:center}
 .pl .bar2{display:flex;justify-content:space-between;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-weight:700}
+.pl .bar2 .nm2,.pl .bar2 .sc2{color:var(--pc,var(--ink))}
 .pl .bar2 span{color:var(--mute);font-weight:500;font-size:14px}
 .pl h2{font-size:24px}
-.pl input{background:#0c1726;border:1px solid var(--line);border-radius:12px;padding:.8em 1em;font-size:22px;text-align:center;width:100%;max-width:320px}
+.pl input{background:#0a181c;border:1px solid var(--line);border-radius:12px;padding:.8em 1em;font-size:22px;text-align:center;width:100%;max-width:320px}
 .btns{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:12px;min-height:50vh}
-.ab{border:0;border-radius:22px;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;box-shadow:0 6px 0 rgba(0,0,0,.28);transition:.1s}
-.ab span{font-size:clamp(44px,14vw,84px);line-height:1}
-.ab b{font-size:22px;opacity:.9}
-.ab:active:not(:disabled){transform:translateY(4px);box-shadow:0 2px 0 rgba(0,0,0,.28)}
-.ab.c0{background:var(--c0)}.ab.c1{background:var(--c1)}.ab.c2{background:var(--c2)}.ab.c3{background:var(--c3)}.ab.t0{background:var(--t0)}.ab.t1{background:var(--t1)}
-.ab:disabled{opacity:.35}
-.ab.sel{opacity:1;outline:5px solid #fff}
+.ab{border:0;border-radius:22px;color:#1d2433;background:#f3ecdc;border-left:16px solid var(--oc,#888);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;box-shadow:0 6px 0 rgba(0,0,0,.4);transition:.1s}
+.ab span{font-size:clamp(48px,15vw,90px);line-height:1;font-weight:900;color:var(--oc)}
+.ab b{font-size:20px;opacity:.7}
+.ab:active:not(:disabled){transform:translateY(4px);box-shadow:0 2px 0 rgba(0,0,0,.4)}
+.ab.o0{--oc:#0f766e}.ab.o1{--oc:#b45309}.ab.o2{--oc:#9d174d}.ab.o3{--oc:#4338ca}.ab.t0{--oc:#15803d}.ab.t1{--oc:#b91c1c}
+.ab:disabled{opacity:.4}
+.ab.sel{opacity:1;outline:5px solid var(--acc)}
 .msg{text-align:center;color:var(--mute);min-height:1.5em}
 .result{border-radius:20px;padding:26px 18px;text-align:center;font-size:30px;font-weight:900}
 .result.ok2{background:rgba(47,182,124,.2);border:2px solid var(--ok)}
@@ -137,7 +140,8 @@ const MAXP=4, LBL=['A','B','C','D'], SYM=['▲','◆','●','■'];
 const base=location.href.split('#')[0];
 const rand4=()=>String(Math.floor(1000+Math.random()*9000));
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-function optMeta(tf,i){return tf?{sym:i===0?'○':'✕',lab:i===0?'正確':'錯誤',cls:i===0?'t0':'t1'}:{sym:SYM[i],lab:LBL[i],cls:'c'+i};}
+const pcv=p=>'var(--p'+(((p&&p.ci)||0)%4)+')';
+function optMeta(tf,i){return tf?{sym:i===0?'○':'✕',lab:i===0?'正確':'錯誤',cls:i===0?'t0':'t1'}:{sym:LBL[i],lab:'',cls:'o'+i};}
 function prep(r){const [cat,q,opts,ans,exp]=r;if(opts.length===2)return{cat,q,opts:opts.slice(),ans,exp};const idx=shuffle(opts.map((_,i)=>i));return{cat,q,opts:idx.map(i=>opts[i]),ans:idx.indexOf(ans),exp};}
 function rankOf(list,p){return 1+list.filter(x=>x.score>p.score).length;}
 function medal(r){return r===1?'🥇':r===2?'🥈':r===3?'🥉':'　'+r;}
@@ -218,6 +222,7 @@ function startHost(room){
   let sv=null;try{sv=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}
   let S=(sv&&sv.room===room&&sv.S)?sv.S:fresh();
   if(S.phase==='question')S.paused=true;
+  S.players.forEach((p,i)=>{if(p.ci==null)p.ci=i;});
   let seen={},cloud='wait',onSig='',lastT=Date.now(),T=null;
   const persist=()=>{try{localStorage.setItem(KEY,JSON.stringify({room,S}));}catch(e){}};
   const online=cid=>Date.now()-(seen[cid]||0)<9000;
@@ -225,7 +230,7 @@ function startHost(room){
     const q=S.qList[S.qi];const rev=S.phase==='reveal';
     return{ts:Date.now(),room,phase:S.phase,paused:S.paused,qi:S.qi,total:S.qList.length,limit:S.limit,remain:Math.round(S.remain),
       q:(q&&S.phase!=='end'&&S.phase!=='lobby')?{cat:q.cat,q:q.q,opts:q.opts,tf:q.opts.length===2,ans:rev?q.ans:null,exp:rev?q.exp:null}:null,
-      players:S.players.map(p=>({cid:p.cid,name:p.name,score:p.score,answered:p.ans!=null,choice:rev?p.ans:null,gain:rev?p.gain:null,on:online(p.cid)}))};
+      players:S.players.map(p=>({cid:p.cid,ci:p.ci,name:p.name,score:p.score,answered:p.ans!=null,choice:rev?p.ans:null,gain:rev?p.gain:null,on:online(p.cid)}))};
   }
   const push=()=>T&&T.send({t:'state',s:pub()});
   function changed(){persist();render();push();}
@@ -236,7 +241,7 @@ function startHost(room){
       const name=String(m.name||'').trim().slice(0,8)||'選手';
       const p=S.players.find(x=>x.cid===m.cid);
       if(p)p.name=name;
-      else if(S.players.length<MAXP)S.players.push({cid:m.cid,name,score:0,ans:null,ansRemain:0,gain:0});
+      else if(S.players.length<MAXP)S.players.push({cid:m.cid,name,ci:[0,1,2,3].find(i=>!S.players.some(x=>x.ci===i)),score:0,ans:null,ansRemain:0,gain:0});
       else T.send({t:'full',cid:m.cid});
       seen[m.cid]=Date.now();changed();return;
     }
@@ -317,7 +322,7 @@ function startHost(room){
     const c=S.cfg;
     const poolN=QUESTIONS.filter(r=>c.cats.includes(r[0])).length;
     const slots=Array.from({length:MAXP},(_,i)=>{const p=S.players[i];
-      return p?`<div class="slot on"><div><span class="dot ${online(p.cid)?'on':''}"></span><b>${esc(p.name)}</b></div><button class="btn danger" data-act="kick" data-cid="${esc(p.cid)}">移除</button></div>`
+      return p?`<div class="slot on"><div><span class="dot ${online(p.cid)?'on':''}"></span><b style="color:${pcv(p)}">${esc(p.name)}</b></div><button class="btn danger" data-act="kick" data-cid="${esc(p.cid)}">移除</button></div>`
               :`<div class="slot mu">選手 ${i+1}：等待加入…</div>`;}).join('');
     return`<div class="grid2"><div class="panel"><h3>① 遊戲設定</h3>
       <div class="row"><label>題數</label><select data-cfg="n">${[10,20,30,50,100,200].map(v=>`<option value="${v}" ${c.n===v?'selected':''}>${v} 題</option>`).join('')}</select><span class="mu">（符合條件的題庫共 ${poolN} 題）</span></div>
@@ -331,16 +336,16 @@ function startHost(room){
   }
   function gameHTML(){
     if(S.phase==='end'){
-      const rows=S.players.slice().sort((a,b)=>b.score-a.score).map(p=>`<tr><td>${medal(rankOf(S.players,p))}</td><td>${esc(p.name)}</td><td><b>${p.score}</b> 分</td></tr>`).join('');
+      const rows=S.players.slice().sort((a,b)=>b.score-a.score).map(p=>`<tr><td>${medal(rankOf(S.players,p))}</td><td style="color:${pcv(p)};font-weight:700">${esc(p.name)}</td><td><b>${p.score}</b> 分</td></tr>`).join('');
       return`<div class="panel"><h3>🏆 遊戲結束（共 ${S.qList.length} 題）</h3><table><tr><th>名次</th><th>選手</th><th>總分</th></tr>${rows}</table>
         <div class="ctrls" style="margin-top:14px"><button class="btn pri" data-act="again">再玩一次（保留選手）</button><button class="btn danger" data-act="newroom">清除並重設房間</button></div></div>`;
     }
     const q=S.qList[S.qi],tf=q.opts.length===2,rev=S.phase==='reveal';
-    const opts=q.opts.map((o,i)=>{const m=optMeta(tf,i);return`<div class="hopt ${i===q.ans?'right':''}"><b>${m.sym}${tf?'':' '+m.lab}</b><span>${tf?esc(o.slice(2)):esc(o)}</span>${i===q.ans?'<span class="ok" style="margin-left:auto">✔ 正解</span>':''}</div>`;}).join('');
+    const opts=q.opts.map((o,i)=>{const m=optMeta(tf,i);return`<div class="hopt ${i===q.ans?'right':''}"><b>${m.sym}</b><span>${tf?esc(o.slice(2)):esc(o)}</span>${i===q.ans?'<span class="ok" style="margin-left:auto">✔ 正解</span>':''}</div>`;}).join('');
     const prow=S.players.map(p=>{let st;
       if(!rev)st=p.ans!=null?'<span class="ok">✔ 已作答</span>':'<span class="mu">思考中…</span>';
       else{const m=p.ans==null?null:optMeta(tf,p.ans);st=p.gain>0?`<span class="ok">${m.sym} 答對 +${p.gain}</span>`:`<span class="bad">${m?m.sym+' 答錯':'未作答'}</span>`;}
-      return`<tr><td><span class="dot ${online(p.cid)?'on':''}"></span>${esc(p.name)}</td><td><b>${p.score}</b></td><td>${st}</td></tr>`;}).join('');
+      return`<tr><td><span class="dot ${online(p.cid)?'on':''}"></span><span style="color:${pcv(p)};font-weight:700">${esc(p.name)}</span></td><td><b>${p.score}</b></td><td>${st}</td></tr>`;}).join('');
     return`<div class="grid2" style="grid-template-columns:1.5fr 1fr">
       <div class="panel qcard"><span class="tag">${esc(q.cat)}</span><span class="tag">第 ${S.qi+1} / ${S.qList.length} 題</span><span class="tag">${rev?'已揭曉':S.paused?'⏸ 暫停中':'作答中'}</span>
         <div class="qtxt">${esc(q.q)}</div><div class="hopts">${opts}</div>
@@ -405,9 +410,9 @@ function startClient(role,room){
     updTimer();
   }
   setInterval(()=>{if(st&&Date.now()-recvAt>6000)render();},2000);
-  function slotCards(s){return Array.from({length:MAXP},(_,i)=>{const p=s.players[i];return p?`<div class="pc ${p.on?'':'off'}"><div class="pn">選手 ${i+1}</div><div class="ps" style="font-size:1.4em">${esc(p.name)}</div></div>`:`<div class="pc empty">等待加入…</div>`;}).join('');}
+  function slotCards(s){return Array.from({length:MAXP},(_,i)=>{const p=s.players[i];return p?`<div class="pc ${p.on?'':'off'}" style="--pc:${pcv(p)}"><div class="pn">選手 ${i+1}</div><div class="ps" style="font-size:1.4em">${esc(p.name)}</div></div>`:`<div class="pc empty">等待加入…</div>`;}).join('');}
   function rankHTML(s){
-    return'<div class="rank">'+s.players.slice().sort((a,b)=>b.score-a.score).map(p=>{const r=rankOf(s.players,p);return`<div class="rk ${r===1?'first':''}"><span class="m">${medal(r)}</span><span class="n">${esc(p.name)}</span><span>${p.score} 分</span></div>`;}).join('')+'</div>';
+    return'<div class="rank">'+s.players.slice().sort((a,b)=>b.score-a.score).map(p=>{const r=rankOf(s.players,p);return`<div class="rk ${r===1?'first':''}" style="--pc:${pcv(p)}"><span class="m">${medal(r)}</span><span class="n">${esc(p.name)}</span><span class="sc">${p.score} 分</span></div>`;}).join('')+'</div>';
   }
   function screenHTML(conn){
     const lost=conn?'':'<div class="lost">連線中斷，重新連線中…</div>';
@@ -422,7 +427,7 @@ function startClient(role,room){
     const cards=s.players.map(p=>{let t;
       if(!rev)t=p.answered?'<span class="ok">✔ 已作答</span>':'<span class="mu">思考中…</span>';
       else{const m=p.choice==null?null:optMeta(q.tf,p.choice);t=p.gain>0?`<span class="ok">${m.sym} +${p.gain}</span>`:`<span class="bad">${m?m.sym+' ✘':'未作答'}</span>`;}
-      return`<div class="pc ${p.on?'':'off'}"><div class="pn">${esc(p.name)}</div><div class="ps">${p.score}</div><div>${t}</div></div>`;}).join('');
+      return`<div class="pc ${p.on?'':'off'}" style="--pc:${pcv(p)}"><div class="pn">${esc(p.name)}</div><div class="ps">${p.score}</div><div>${t}</div></div>`;}).join('');
     const am=optMeta(q.tf,q.ans||0);
     const exp=rev?`<div class="exp"><b>✅ 正解：${am.sym} ${q.tf?esc(q.opts[q.ans].slice(2)):esc(q.opts[q.ans])}</b><br>${esc(q.exp)}</div>`:'';
     return`<div class="scr ${rev?'rev':''}">${lost}<div class="top"><span class="cat">${esc(q.cat)}</span><span class="no">第 ${s.qi+1} / ${s.total} 題</span>
@@ -440,7 +445,7 @@ function startClient(role,room){
         <p class="bad">${full?'房間已滿（最多 4 位選手）':''}</p>${st?'':'<p class="mu">尚未連到主持人…</p>'}</div>`;
     }
     const s=st,rank=rankOf(s.players,p);
-    const head=`<div class="bar2"><div>${esc(p.name)}</div><div>${p.score} 分 <span>・第 ${rank} 名</span></div></div>`;
+    const head=`<div class="bar2" style="--pc:${pcv(p)}"><div class="nm2">${esc(p.name)}</div><div><span class="sc2" style="font-size:inherit;color:var(--pc);font-weight:700">${p.score} 分</span> <span>・第 ${rank} 名</span></div></div>`;
     if(s.phase==='lobby')return`<div class="pl">${lost}${head}<div class="pl center" style="flex:1"><h2>已加入！</h2><p class="mu">等待主持人開始遊戲…</p></div></div>`;
     if(s.phase==='end')return`<div class="pl">${lost}${head}<div class="result ${rank===1?'ok2':'nn'}">${medal(rank)} 第 ${rank} 名<small>總分 ${p.score} 分</small></div><p class="msg">看大螢幕的最終排名吧！</p></div>`;
     const q=s.q;
