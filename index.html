@@ -193,7 +193,6 @@ details.fmt code{background:#0a181c;padding:.05em .4em;border-radius:5px;color:v
 .wtc{margin-top:52px;padding-top:26px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
 .wtc .lg{background:#fff;border-radius:16px;padding:6px 8px;display:flex;box-shadow:0 2px 10px #0006}
 .wtc .lg img{display:block;height:56px;width:auto}
-.wtc .nm{font-size:20px;font-weight:800;letter-spacing:.04em}
 .wtc .fb{color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.5em 1.1em .5em .6em;font-weight:600;transition:.15s}
 .wtc .fb:hover{border-color:#1877f2;background:#1b3a5c}
 .wtc .fb i{width:26px;height:26px;border-radius:50%;background:#1877f2;color:#fff;display:grid;place-items:center;font-style:normal;font-weight:900;font-size:17px;line-height:1;font-family:Arial,sans-serif}
@@ -3858,7 +3857,7 @@ function home(){
    <div class="hc"><h2>🖥️ 大螢幕</h2><p>投影在教室前方，顯示題目、選項、倒數與每位選手的角色與分數。</p><input id="r1" placeholder="房號" inputmode="numeric" maxlength="4"><button class="btn" data-go="screen" data-in="r1">開啟大螢幕</button></div>
    <div class="hc"><h2>📱 選手</h2><p>在手機或平板上只看到按鈕作答，不會看到題目文字。</p><input id="r2" placeholder="房號" inputmode="numeric" maxlength="4"><button class="btn" data-go="play" data-in="r2">我是選手</button></div>
   </div>
-  <footer class="wtc"><span class="lg"><img src="wt-logo.png" alt="WT. Hsiao 的圖示" width="50" height="56"></span><span class="nm">WT. Hsiao</span><a class="fb" href="https://www.facebook.com/W.T.hsiao/" target="_blank" rel="noopener noreferrer"><i aria-hidden="true">f</i>Facebook<span class="so">（另開分頁）</span></a></footer></div>`;
+  <footer class="wtc"><span class="lg"><img src="wt-logo.png" alt="WT. Hsiao 的圖示" width="50" height="56"></span><a class="fb" href="https://www.facebook.com/W.T.hsiao/" target="_blank" rel="noopener noreferrer"><i aria-hidden="true">f</i>Facebook<span class="so">（另開分頁）</span></a></footer></div>`;
   app.onclick=e=>{
     const b=e.target.closest('[data-go]');if(!b)return;
     const role=b.dataset.go;
