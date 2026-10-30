@@ -3629,7 +3629,7 @@ const TITLE=CFG.icon+' '+CFG.title;
 document.title=CFG.title;
 try{Object.keys(CFG.theme||{}).forEach(k=>document.documentElement.style.setProperty('--'+k,CFG.theme[k]));}catch(e){}
 const MAXP=4, LBL=['A','B','C','D'];
-const pageBase=location.href.split('#')[0];
+const pageBase=location.href.split('#')[0].split('?')[0];/* 去掉 ?fbclid=… 等追蹤參數，讓加入連結與 QR Code 保持簡短 */
 const base=pageBase;
 const isLocalHost=/^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(location.hostname);
 const pubBase=(/^https?:$/.test(location.protocol)&&!isLocalHost)?pageBase:(CFG.publicUrl||pageBase);
